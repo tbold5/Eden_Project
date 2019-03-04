@@ -1,0 +1,15 @@
+.title, .pioneer, .advocate {
+    position: absolute;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#pioneer_img, #advocate_img {
+    position: absolute;
+    top: 50%;
+}
+
+p {
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;        
+}

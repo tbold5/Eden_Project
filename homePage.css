@@ -29,17 +29,15 @@
     margin: auto;
 }
 .intro {
-    position: absolute;
-    margin-left: 0px;
-    margin-top: 0px;
-}
-.intro {
     font-family: 'Abel', sans-serif;
     font-weight: 300;
     font-size: 1em; 
     position: fixed;
     top: 50%;
     left: 30%;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 .intro .button .button-one {
     display:inline-block;

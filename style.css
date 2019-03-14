@@ -23,16 +23,56 @@ p {
     font-family: 'Abel', sans-serif;        
 }
 
-/* Create Page CSS */
+/* Create Post CSS */
 
-.create_bar {
-    border: 10px;
+.create {
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px;
+    width: 600px;
+    height: 30px;
 }    
-
-.fill_in_box {
-    border: 20px; 
-
+.all {
+    position: absolute;
+    left: 30%;
 }
-.h3 {
-    font-family: 'Abel', sans-serif;
+
+label {
+    font-size: 160%;
+}
+textarea {
+    resize: none;
+  }
+textarea:valid {
+    border: 2px solid white;
+}
+textarea:invalid {
+    border: 2px solid red;
+}
+
+.button .button-one {
+    display:inline-block;
+    padding: 1em 1em;
+    border:0.2em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color:white;
+    text-align: center;
+    transition: all 0.2s;
+}
+.button .button-one:hover {
+    color: #43C6AC;
+    background-color: #FFFFFF;
+    
+}
+.button-one {
+    position: absolute;
+    top: 110%;
+    left: 40%;
+    
 }

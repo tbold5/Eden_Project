@@ -73,6 +73,24 @@ textarea:invalid {
 .button-one {
     position: absolute;
     top: 110%;
-    left: 40%;
-    
+    left: 40%;   
 }
+
+/* Search Lists CSS */
+
+.list_one {
+    border: 5px solid white;
+    background: white;
+    padding: 0px 5px;
+    border-radius: 0px;
+    width: 600px;
+    height: 80px;
+}  
+.list_two {
+    border: 5px solid white;
+    background: white;
+    padding: 0px 5px;
+    border-radius: 0px;
+    width: 600px;
+    height: 80px;
+}    

@@ -39,16 +39,16 @@ body {
     font-weight: 300;
     font-size: 1em; 
     position: fixed;
-    top: 50%;
-    left: 30%;
+    top: 68%;
+    left: 33%;
     position: absolute;
     margin-left: 0px;
     margin-top: 0px;
 }
 .intro .button .button-one {
     display:inline-block;
-    padding: 2em 0em;
-    border:0.1em solid #FFFFFF;
+    padding: 1em 1em;
+    border:0.2em solid #FFFFFF;
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
@@ -56,11 +56,27 @@ body {
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
     font-size: 1em;
-    color: blue;
+    color:white;
     text-align: center;
     transition: all 0.2s;
 }
-.intro .button .button-one:hover {
-    color: #000000;
+.button .button-one:hover {
+    color: #43C6AC;
     background-color: #FFFFFF;
+    
+}
+.intro{
+    color: white;
+}
+.button-one {
+    position: absolute;
+    top: 120%;
+    left: 26%;
+    
+}
+
+.eden_logo {
+    position: absolute;
+    left: 30%;
+    top: 10%;
 }

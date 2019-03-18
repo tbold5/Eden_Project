@@ -10,8 +10,7 @@
     <style>
     .title, .volunteer, .job, .club, .event {
         position: absolute;
-        text-align: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+        text-align: center;  
     }
 
     #volunteer_img, #job_img, #club_img, #event_img {
@@ -20,10 +19,12 @@
     }
 
     p {
-        position: absolute;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;        
+        position: absolute;      
     }
     
+    .text {
+        font-family: 'Abel', sans-serif;
+    }
     
     </style>
 </head>
@@ -31,7 +32,7 @@
 <body>
 
     <a href = "home.html"> <!-- Fix the url when we get the official url for Home page -->
-    <img src = "./images/home.png" width = 100 />
+    <img src = "./images/Eden_logo.png" width = 100 />
     </a>
 
     <input type="search" id="search" name="q"
@@ -40,6 +41,8 @@
 
     <button id = "button" style = "float: right;"> Login </button>
     <button id = "button" style = "position: absolute; left: 92%;"> Sign Up </button>
+
+    <div class = "text">
 
     <h1 class = "title" style = "top: 20%; left: 30%; font-size: 250%;"> What Are You Looking For?</h1>
     <h2 class = "volunteer" style = "top: 40%; left: 15%; font-size: 200%;"> Volunteer </h2>
@@ -60,7 +63,7 @@
     <a href = "https://www.bcit.ca/"> <!-- Fix the url when we get the official url for event -->
     <img id = "event_img" src = "./images/event.png" width = 200 style = "left: 73%;" alt = "Event image"/></a>
 
-
+    </div>
 
 </body>
 </html>

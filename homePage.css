@@ -71,12 +71,27 @@ body {
 .button-one {
     position: absolute;
     top: 120%;
-    left: 26%;
-    
+    left: 26%;   
 }
-
 .eden_logo {
     position: absolute;
     left: 30%;
     top: 10%;
+}
+
+.login .login-button:hover .sign-in-button:hover {
+    color: #43C6AC;
+    background-color: #FFFFFF;
+}
+.login-button {
+    position: absolute;
+    top: 1%;
+    left: 90%;
+    font-family: 'Abel', sans-serif;
+}
+.sign-in-button {
+    position: absolute;
+    top: 1%;
+    left: 95%;
+    font-family: 'Abel', sans-serif;
 }

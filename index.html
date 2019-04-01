@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='style.css' rel='stylesheet' type='text/css'>
     <title>Eden: Who Are You?</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
     <script src='index.js'></script>
 </head>
     
@@ -34,7 +35,28 @@
     <p style = "left: 27%; top: 83%;"> make this world better place...</p>
     <p style = "left: 59%; top: 80%;"> Join the community, be a part of</p>
     <p style = "left: 61%; top: 83%;"> something meaningful... </p>
-
+    
+    <!-- DOM element goes here -->
+    <!-- <h1 id="abc"> Eden Project </h1> -->
+    <!-- uncomment lines below to see demo of realtime db -->
+    <!-- assumes you have a firebase RT DB with a "message" key -->
+    <script>
+    var output = document.getElementById("abc");
+    var dbRef = firebase.database().ref().child("message1");
+    dbRef.on (
+        "value",    //event to read static snapshot of db at initial call, and future chg
+        function(snap){        // event callback receives snapshot
+            output.innerText = snap.val();
+        });
+    </script>
+    
+    <!-- <h1 id="123"> This is demo </h1> -->
+    <script>
+    //Uses shorthand arrow notation for callback function
+    var out = document.getElementById("123");
+    var db = firebase.database().ref().child("message2");
+    db.on ("value", snap => out.innerText = snap.val());
+    </script>
 
 
 

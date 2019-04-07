@@ -1,3 +1,12 @@
+let title = document.getElementById('title')
+let titleValue = document.getElementById('title').value
+let submitButton = document.getElementById('submitButton')
+
+function submitClick() {
+    let firebaseRef = firebase.database().ref();
+
+    firebaseRef.child('title').set('Vancouver')
+}
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
@@ -19,17 +28,3 @@ function logout() {
         // An error happened.
     });
 }
-(function(){  
-
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyC9Zlt1R-YXA8cKmZFh_hyF0sa6YOlUIsU",
-        authDomain: "edenproject-5e496.firebaseapp.com",
-        databaseURL: "https://edenproject-5e496.firebaseio.com",
-        projectId: "edenproject-5e496",
-        storageBucket: "edenproject-5e496.appspot.com",
-        messagingSenderId: "856284101162"
-    };
-    firebase.initializeApp(config);
-    app_firebase = firebase; 
-  })();

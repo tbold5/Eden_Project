@@ -11,22 +11,10 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link type="text/css" rel='stylesheet' href="/style.css">
 
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyC9Zlt1R-YXA8cKmZFh_hyF0sa6YOlUIsU",
-        authDomain: "edenproject-5e496.firebaseapp.com",
-        databaseURL: "https://edenproject-5e496.firebaseio.com",
-        projectId: "edenproject-5e496",
-        storageBucket: "edenproject-5e496.appspot.com",
-        messagingSenderId: "856284101162"
-    };
-    firebase.initializeApp(config);
-    </script>
-
 </head>
 <body>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src='setup_firebase_eden.js'></script>
     <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
     <div id="firebaseui-auth-container"></div>
@@ -53,7 +41,7 @@
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: 'index.html',
+    signInSuccessUrl: 'create_page.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         // firebase.auth.GoogleAuthProvider.PROVIDER_ID,

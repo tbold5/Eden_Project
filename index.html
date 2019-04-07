@@ -10,36 +10,27 @@
 </head>
     
 <body>
+    <!-- Firebase script -->
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script src='setup_firebase_eden.js'></script>
+    <!-- Home -->
     <a href = 'home.html'>
     <img src = "./images/eden_logo.png" width = 100 />
     </a>
-
-    <div>
-        <p id='user-greeting' style="float:right;"></p>
-    </div>
-
-
+    <!-- Pioneer & Advocate -->
     <h1 class = "title" style = "top: 17%; left: 41%; font-size: 300%;"> Who Are You? </h1>
     <h2 class = "pioneer" style = "top: 40%; left: 30%; font-size: 200%;"> Pioneer </h2>
     <h2 class = "advocate" style = "top: 40%; left: 62%; font-size: 200%;"> Advocate </h2>
-
-    <a href = "create_page.html"> <!-- Fix the url when we get the official url for pioneers -->
+    <!-- Pioneer  -->
+    <a href = "create_page.html"> 
     <img id = "pioneer_img" src = "./images/pioneer_logo.png" width = 350 style = "left: 21%;" alt = "pioneer image"/></a>
-
-    <a href = "category.html"> <!-- Fix the url when we get the official url for advocate -->
+    <!-- Advocate -->
+    <a href = "category.html"> 
     <img id = "advocate_img" src = "./images/advocate_logo.png" width = 350 style = "left: 53%;" alt = "advocate image"/></a>
-
+    <!-- Description -->
     <p style = "left: 25%; top: 80%;"> Recruit people from the community to </p> 
     <p style = "left: 27%; top: 83%;"> make this world better place...</p>
     <p style = "left: 59%; top: 80%;"> Join the community, be a part of</p>
     <p style = "left: 61%; top: 83%;"> something meaningful... </p>
-    
-    <!-- DOM element goes here -->
-    <!-- <h1 id="abc"> Eden Project </h1> -->
-    <!-- uncomment lines below to see demo of realtime db -->
-    <!-- assumes you have a firebase RT DB with a "message" key -->
-    
 </body>
 </html>

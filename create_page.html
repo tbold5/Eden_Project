@@ -24,20 +24,20 @@
     <form id='profile'>
         <label>Title</label>
         <br>
-        <input type='text' id='input_title' placeholder="Type title here.">
+        <input type='text' id='title' placeholder="Type title here.">
         <br>
-        <label>Date</label>
+        <label> Date</label>
         <br>
-        <input type='date' id='date' placeholder="Enter dates here.">
+        <input type='datetime-local' id='date' placeholder="Enter dates here.">
         <br>
         <label> Description </label>
         <br>
-        <input type='text' id='input_description' placeholder="Type description about your community here.">
+        <input type='text' id='description' placeholder="Type description about your community here.">
         <br>
         <label> Location </label>
         <br>
         <input type='text' id='location' placeholder="Type location here.">
-        <button type="submit" id = "submit_button">Submit
+        <button type="submit" id = "submit_button"> CREATE
     </form>
         <script>
             document.getElementById('profile').addEventListener('submit', submitForm);

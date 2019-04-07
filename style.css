@@ -107,7 +107,7 @@ input[type=text] {
     border-radius: 10px;
 }
 
-input[type=date] {
+input[type=datetime-local] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -124,12 +124,30 @@ input[type=date] {
 }
 
 #submit_button {
-    background-color: white;
-    border: none;
-    color: #43C6AC;
-    font-size: 16px;
-    margin: 10px 5px;
-    cursor: pointer;
-    text-align: center;
+    display:inline-block;
+    padding: 1em 1em;
+    border:0.2em solid #FFFFFF;
+    margin:0 0.3em 0.6em 0;
+    border-radius: 10em;
+    box-sizing: border-box;
+    text-decoration:none;
 
+    font-weight: 300;
+    font-size: 1em;
+    color:#43C6AC;
+    text-align: center;
+    transition: all 0.2s;
+    background: none;
+    color: white;
+}
+#submit_button:hover {
+    color: #43C6AC;
+    background-color: #FFFFFF;
+    
+}
+#submit_button {
+    position: absolute;
+    top: 106%;
+    left: 40%; 
+      
 }

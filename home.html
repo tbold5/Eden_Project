@@ -32,16 +32,18 @@
             <h1>Connect To Create Eco-Friendly World</h1>
         <br>
             <div class='button'>
-                <a href='login.html'>
+                <a id='loggedin' href='login.html'>
                 <h2 class='button-one'>JOIN OUR COMMUNITY</h2>
                 </a>
             </div>
         </div>
     </header>
     <script>
+        // If user logged in, go to next page without loggin in.
          firebase.auth().onAuthStateChanged(function(user) {
                 if (user) {
                     console.log('signed in')
+                    document.getElementById('loggedin').href ='index.html'
                 } else {
                     console.log('signed out')
                 }

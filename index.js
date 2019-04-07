@@ -1,20 +1,15 @@
-let title = document.getElementById('title')
-let titleValue = document.getElementById('title').value
-let submitButton = document.getElementById('submitButton')
-
-function submitClick() {
-    let firebaseRef = firebase.database().ref();
-
-    firebaseRef.child('title').set('Vancouver')
-}
+var userId = '';
 firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
+    userId = user.uid;
+});
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (userId) {
       // User is signed in.
       let user = firebase.auth().currentUser;
 
-      if (user != null) {
-          var email_id = user.email;
-          document.getElementById('user-greeting').innerHTML = 'Welcome user : ' + email_id
+      if (userId != null) {
+          
       }
     } else {
       // No user is signed in.

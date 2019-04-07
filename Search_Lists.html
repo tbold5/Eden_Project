@@ -22,38 +22,68 @@
         <div class = "all" style = "font-family: 'Abel', sans-serif;">
 
         <!-- CHANGE *CATEGORY TITLE* ACCORDING TO USER'S CHOICE FROM PREVIOUS PAGE -->
-        <h1 class = "create" style = "color: white;"> VOLUNTEER </h1>
+        <h1 class = "create" style = "color: white;"> Posts </h1>
         
 
         <!-- EVERY LIST SHOULD BE USING THE "CREATE" INFO FOR DISPLAY -->
         <div class = "list_one">
-            <p id = "list_one_title" style = "font-size: 120%;"> <b> Looking for Volunteers to Plant Lily </b></p>
+            <p id = "list_one_title"> <b> Looking for Volunteers to Plant Lily </b></p>
             <br>
             <p id = "list_one_description"> We are "Citily" community and we are striving to make the air quality better... </p>
             <br>
-            <p id = "list_one_detail" style = "font-size: 80%; color: silver;"> 562 Pearl Court Sainte-Marie, QC G6E M0J </p>
+            <p id = "list_one_location" style = "font-size: 80%; color: silver;"> 562 Pearl Court Sainte-Marie, QC G6E M0J </p>
         </div>
         <br>
 
         <!-- *USE FUNCTION TO CREATE ANOTHER DIFFERENT LIST IN THE SAME FORMAT* This is just to show... for now -->
         <div class = "list_two">
-                <p id = "list_two_title" style = "font-size: 120%;"> <b> Title </b></p>
+                <p id = "list_two_title"> <b> Title </b></p>
                 <br>
                 <p id = "list_two_description"> Description... </p>
                 <br>
-                <p id = "list_two_detail" style = "font-size: 80%; color: silver;"> Location Address </p>
+                <p id = "list_two_location" style = "font-size: 80%; color: silver;"> Location Address </p>
             </div>
+        <script>
+            function getDataFromFB() {
+                firebase.auth().onAuthStateChanged(function(user) {
+                let userID = localStorage.getItem('userid')
+                let dbRef = firebase.database().ref("users/" + userID)
+                dbRef.once('value',function(snap) {
+                    keys = snap.val();
+            // for (key in keys) {
+                linebreak1 = document.createElement('br');
+                linebreak2 = document.createElement('br');
+                linebreak3 = document.createElement('br');
+                var div = document.createElement('div');
+                div.classList.add('list_one')
+                div.classList.add('all')
+                div.classList.add('class')
+                var paraTitle = document.createElement('b');
+                var paraDescription = document.createElement('p');
+                var paraLocation = document.createElement('p');
+                var paraDate = document.createElement('p');
+                paraTitle.style="font-family: Roboto, sans-serif; color: green;"
+                paraDescription.style="font-size: 80%;"
+                paraLocation.style="font-size: 80%; color: silver;"
+                paraDate.style="font-size: 60%; color: silver;"
+                paraTitle.innerHTML = keys['title']
+                paraDescription.innerHTML = keys['description']
+                paraLocation.innerHTML = keys['location']
+                paraDate.innerHTML = keys['date']
+                
+                document.body.appendChild(div);
+                div.appendChild(paraTitle);
+                div.appendChild(linebreak1)
+                div.appendChild(paraDescription);
+                div.appendChild(linebreak2)
+                div.appendChild(paraLocation);
+                div.appendChild(linebreak3)
+                div.appendChild(paraDate);
+
+            // }
+            })})}
+            getDataFromFB()
+        </script>
         
-        
-        </div>
-
-
-        
-
-
-    
-    
-
-        </div>
     </body>
 </html>

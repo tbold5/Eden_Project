@@ -79,6 +79,7 @@ textarea:invalid {
 /* Search Lists CSS */
 
 .list_one {
+    font-size: 120%;
     border: 5px solid white;
     background: white;
     padding: 0px 5px;
@@ -87,6 +88,7 @@ textarea:invalid {
     height: 80px;
 }  
 .list_two {
+    font-size: 120%;
     border: 5px solid white;
     background: white;
     padding: 0px 5px;

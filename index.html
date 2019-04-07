@@ -25,7 +25,7 @@
     <h2 class = "pioneer" style = "top: 40%; left: 30%; font-size: 200%;"> Pioneer </h2>
     <h2 class = "advocate" style = "top: 40%; left: 62%; font-size: 200%;"> Advocate </h2>
 
-    <a href = "category.html"> <!-- Fix the url when we get the official url for pioneers -->
+    <a href = "create_page.html"> <!-- Fix the url when we get the official url for pioneers -->
     <img id = "pioneer_img" src = "./images/pioneer_logo.png" width = 350 style = "left: 21%;" alt = "pioneer image"/></a>
 
     <a href = "category.html"> <!-- Fix the url when we get the official url for advocate -->
@@ -40,25 +40,6 @@
     <!-- <h1 id="abc"> Eden Project </h1> -->
     <!-- uncomment lines below to see demo of realtime db -->
     <!-- assumes you have a firebase RT DB with a "message" key -->
-    <script>
-    var output = document.getElementById("abc");
-    var dbRef = firebase.database().ref().child("message1");
-    dbRef.on (
-        "value",    //event to read static snapshot of db at initial call, and future chg
-        function(snap){        // event callback receives snapshot
-            output.innerText = snap.val();
-        });
-    </script>
     
-    <!-- <h1 id="123"> This is demo </h1> -->
-    <script>
-    //Uses shorthand arrow notation for callback function
-    var out = document.getElementById("123");
-    var db = firebase.database().ref().child("message2");
-    db.on ("value", snap => out.innerText = snap.val());
-    </script>
-
-
-
 </body>
 </html>

@@ -53,6 +53,7 @@
                 var firebase = app_firebase;
                 
                 firebase.auth().onAuthStateChanged(function(user){
+                        window.localStorage.setItem('userid', String(user.uid)) 
                         console.log(title);
                         console.log(date);
                         console.log(description);

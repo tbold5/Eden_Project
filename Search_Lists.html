@@ -7,62 +7,48 @@
     <link href='style.css' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <title> Search Listings </title>
-
 </head>
+    
+    <!-- Javascript & Firebase Scripts -->
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script src='setup_firebase_eden.js'></script>
     <script src='index.js'></script>
-    <body>
+    
+<body>
+
+        <!-- Home Page -->
         <a href = 'home.html'>
         <img src = "./images/eden_logo.png" width = 100 />
         </a>
 
-
-
-        <div class = "all" style = "font-family: 'Abel', sans-serif;">
-
-        <!-- CHANGE *CATEGORY TITLE* ACCORDING TO USER'S CHOICE FROM PREVIOUS PAGE -->
+        <!-- Create Post -->
+        <div class = "all" id='div' style = "font-family: 'Abel', sans-serif;">
         <h1 class = "create" style = "color: white;"> Posts </h1>
-        
-
-        <!-- EVERY LIST SHOULD BE USING THE "CREATE" INFO FOR DISPLAY -->
-        <div class = "list_one">
-            <p id = "list_one_title"> <b> Looking for Volunteers to Plant Lily </b></p>
-            <br>
-            <p id = "list_one_description"> We are "Citily" community and we are striving to make the air quality better... </p>
-            <br>
-            <p id = "list_one_location" style = "font-size: 80%; color: silver;"> 562 Pearl Court Sainte-Marie, QC G6E M0J </p>
         </div>
-        <br>
 
-        <!-- *USE FUNCTION TO CREATE ANOTHER DIFFERENT LIST IN THE SAME FORMAT* This is just to show... for now -->
-        <div class = "list_two">
-                <p id = "list_two_title"> <b> Title </b></p>
-                <br>
-                <p id = "list_two_description"> Description... </p>
-                <br>
-                <p id = "list_two_location" style = "font-size: 80%; color: silver;"> Location Address </p>
-            </div>
         <script>
+            // Create Post Using Firebase
             function getDataFromFB() {
                 firebase.auth().onAuthStateChanged(function(user) {
                 let userID = localStorage.getItem('userid')
                 let dbRef = firebase.database().ref("users/" + userID)
                 dbRef.once('value',function(snap) {
                     keys = snap.val();
-            // for (key in keys) {
+                    
+                // Linebreaks
                 linebreak1 = document.createElement('br');
                 linebreak2 = document.createElement('br');
                 linebreak3 = document.createElement('br');
+                linebreak4 = document.createElement('br');
+                // Create elements
                 var div = document.createElement('div');
                 div.classList.add('list_one')
-                div.classList.add('all')
-                div.classList.add('class')
                 var paraTitle = document.createElement('b');
                 var paraDescription = document.createElement('p');
                 var paraLocation = document.createElement('p');
                 var paraDate = document.createElement('p');
-                paraTitle.style="font-family: Roboto, sans-serif; color: green;"
+                // Inner Styling of Elements
+                paraTitle.style="font-family: 'Abel', sans_serif; color: green; text-decoration: underline;"
                 paraDescription.style="font-size: 80%;"
                 paraLocation.style="font-size: 80%; color: silver;"
                 paraDate.style="font-size: 60%; color: silver;"
@@ -70,8 +56,8 @@
                 paraDescription.innerHTML = keys['description']
                 paraLocation.innerHTML = keys['location']
                 paraDate.innerHTML = keys['date']
-                
-                document.body.appendChild(div);
+                // Append elements to html
+                document.getElementById('div').appendChild(div);
                 div.appendChild(paraTitle);
                 div.appendChild(linebreak1)
                 div.appendChild(paraDescription);
@@ -79,11 +65,11 @@
                 div.appendChild(paraLocation);
                 div.appendChild(linebreak3)
                 div.appendChild(paraDate);
-
-            // }
+                div.appendChild(linebreak4)
             })})}
             getDataFromFB()
-        </script>
-        
-    </body>
+        </script> 
+
+</body>
+
 </html>

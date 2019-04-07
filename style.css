@@ -31,7 +31,6 @@ p {
     padding: 10px;
     width: 600px;
     height: 30px;
-
 }    
 .all {
     position: absolute;
@@ -84,9 +83,9 @@ textarea:invalid {
     border: 5px solid white;
     background: white;
     padding: 0px 5px;
-    border-radius: 0px;
-    width: 600px;
-    height: 80px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
 }  
 .list_two {
     font-size: 120%;

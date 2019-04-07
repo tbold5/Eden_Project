@@ -19,25 +19,25 @@
         <div class = "all" style = "font-family: 'Abel', sans-serif;">
 
         <!-- CHANGE "SOMETING" ACCORDING TO USER'S CHOICE FROM PREVIOUS PAGE -->
-        <h1 class = "create" style = "color: white;"> CREATE SOMETHING </h1> 
+        <h2 class = "create" style = "color: white; text-align: center; font-size: 27px;">Create Your Post</h2> 
         
     <form id='profile'>
         <label>Title</label>
         <br>
-        <input type='text' id='title' rows="2" cols=" 100" placeholder="Type title here.">
+        <input type='text' id='input_title' placeholder="Type title here.">
         <br>
         <label>Date</label>
         <br>
-        <input type='date' id='date' rows="2" cols=" 100" placeholder="Enter dates here.">
+        <input type='date' id='date' placeholder="Enter dates here.">
         <br>
         <label> Description </label>
         <br>
-        <input type='text' id='description' rows="8" cols=" 100" placeholder="Type description about your community here.">
+        <input type='text' id='input_description' placeholder="Type description about your community here.">
         <br>
         <label> Location </label>
         <br>
-        <input type='text' id='location' rows="3" cols=" 100" placeholder="Type location here.">
-        <input type="submit">
+        <input type='text' id='location' placeholder="Type location here.">
+        <button type="submit" id = "submit_button">Submit
     </form>
         <script>
             document.getElementById('profile').addEventListener('submit', submitForm);

@@ -10,6 +10,11 @@
     <title>Home</title>
 </head>
 <body>
+     <!-- Javascript & Firebase Scripts -->
+     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+     <script src='setup_firebase_eden.js'></script>
+     <script src='index.js'></script>
+
     <header class='headerContainer'>
         <!-- Home -->
         <div class='row'>
@@ -33,5 +38,14 @@
             </div>
         </div>
     </header>
+    <script>
+         firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    console.log('signed in')
+                } else {
+                    console.log('signed out')
+                }
+                });
+    </script>
 </body>
 </html>

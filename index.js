@@ -19,6 +19,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 function logout() {
     firebase.auth().signOut().then(function(){
         // Sign-out sucessfull.
+        document.getElementById('logout').setAttribute('href') = 'home.html'
     }).catch(function(error) {
         // An error happened.
     });
@@ -62,15 +63,3 @@ function getDataFromFB() {
     div.appendChild(paraDate);
     div.appendChild(linebreak4)
 })})}
-
-// function displayList (list){
-//     firebase.auth().onAuthStateChanged(function(user) {
-//         let userID = localStorage.getItem('userid')
-//         let dbRef = firebase.database().ref("users/" + userID)
-//         dbRef.once('value',function(snap) {
-//             list = snap.val();
-//             for (key in list){
-//             console.log(key);             //key   
-//             console.log(list[key]);       //value
-//             }
-//         }

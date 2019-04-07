@@ -21,12 +21,23 @@
         <img src = "./images/eden_logo.png" width = 100 />
         </a>
 
+        <!-- Logout -->
+        <a href= 'home.html'>
+        <button type='submit' id='logout' style='float: right;' onclick="logout()">Logout</button>
+        </a>
         <!-- Create Post -->
         <div class = "all" id='div' style = "font-family: 'Abel', sans-serif;">
-        <h1 class = "create" style = "color: white;"> Posts </h1>
+        <h2 class = "create" style = "color: white; text-align: center; font-size: 27px;"> Posts </h2>
         </div>
 
         <script>
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    console.log('signed in')
+                } else {
+                    console.log('signed out')
+                }
+                });
             getDataFromFB()
         </script> 
 

@@ -8,7 +8,9 @@ Eden is based on the idea of people bonding together with one purpose in mind: C
 Our mission is to connect people through club, event, job and volunteer opportunities based on their passion to contribute back to their respectful community. Through our built connections, we will build a platform that does not just connect people, but create a niche where like-minded people gather around to contribute their fair share to the environment.
 
 ## Project Link
-[Eden] (https://edenproject-5e496.firebaseapp.com) to link to our webapp.
+[Eden](https://edenproject-5e496.firebaseapp.com) to link to our webapp.
 
 ### Project Status
+```bash
 Active
+```

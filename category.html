@@ -33,9 +33,15 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script src='setup_firebase_eden.js'></script>
 
-    <a href = "home.html"> <!-- Fix the url when we get the official url for Home page -->
+    <a href = "home.html"> 
     <img src = "./images/Eden_logo.png" width = 100 />
     </a>
+
+    <!-- Logout -->
+    <a href= 'home.html'>
+    <button type='submit' id='logout' style='float: right;' onclick="logout()">Logout</button>
+    </a> 
+
     <div class = "text">
 
     <h1 class = "title" style = "top: 20%; left: 35%; font-size: 250%;"> What Are You Looking For?</h1>
@@ -45,19 +51,37 @@
     <h2 class = "event" style = "top: 40%; left: 77.5%; font-size: 200%;"> Event </h2>
 
 
-    <a href = "Search_Lists.html"> <!-- Fix the url when we get the official url for volunteer page -->
+    <a href = "Search_Lists.html"> 
         <br>
     <img id = "volunteer_img" src = "./images/volunteer.png" width = 164 style = "position: absolute; top: 52%; left: 13.5%;" alt = "Volunteer image"/></a>
+        <div style = "position: absolute; left: 13%; top: 77%; text-align: center; opacity: 0.7;">
+            Looking to be a volunteer?<br>
+            Connect with our community<br>
+            in a meaningful way.
+        </div>
 
-    <a href = "Search_Lists.html"> <!-- Fix the url when we get the official url for job page -->
+    <a href = "Search_Lists.html"> 
     <img id = "job_img" src = "./images/job.png" width = 200 style = "left: 33%;" alt = "Job image"/></a>
+    <div style = "position: absolute; left: 35%; top: 77%; text-align: center; opacity: 0.7;">
+            Join the workforce and<br>
+            impact the environment.
+        </div>
 
-    <a href = "Search_Lists.html"> <!-- Fix the url when we get the official url for club -->
+    <a href = "Search_Lists.html"> 
     <img id = "club_img" src = "./images/club.png" width = 200 style = "left: 53%;" alt = "Club image"/></a>
+    <div style = "position: absolute; left: 54.5%; top: 77%; text-align: center; opacity: 0.7;">
+            Explore eco-friendly clubs<br>
+            and meet people with<br>
+            similar interest.
+        </div>
 
-    <a href = "Search_Lists.html"> <!-- Fix the url when we get the official url for event -->
+    <a href = "Search_Lists.html"> 
     <img id = "event_img" src = "./images/event.png" width = 200 style = "left: 73%;" alt = "Event image"/></a>
-
+    <div style = "position: absolute; left: 75%; top: 77%; text-align: center; opacity: 0.7;">
+            Find events that support<br>
+            our environment.
+           
+        </div>
     </div>
 
 </body>

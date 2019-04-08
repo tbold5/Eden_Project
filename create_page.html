@@ -16,6 +16,10 @@
         <a href = 'home.html'>
         <img src = "./images/eden_logo.png" width = 100 />
         </a>
+        <!-- Logout -->
+        <a href= 'home.html'>
+        <button type='submit' id='logout' style='float: right;' onclick="logout()">Logout</button>
+        </a>    
         <div class = "all" style = "font-family: 'Abel', sans-serif;">
 
         <!-- CHANGE "SOMETING" ACCORDING TO USER'S CHOICE FROM PREVIOUS PAGE -->
@@ -38,6 +42,8 @@
         <br>
         <input type='text' id='location' placeholder="Type location here.">
         <button type="submit" id = "submit_button"> CREATE
+
+
     </form>
         <script>
             document.getElementById('profile').addEventListener('submit', submitForm);

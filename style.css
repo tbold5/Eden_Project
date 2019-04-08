@@ -150,3 +150,20 @@ input[type=datetime-local] {
     left: 40%; 
       
 }
+
+#logout {
+    border: 2px solid white;
+    border-radius: 20px;
+    background: none;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: white;     
+}
+#logout:hover {
+    color: #43C6AC;
+    background-color: white;
+}
